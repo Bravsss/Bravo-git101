@@ -1,0 +1,36 @@
+<!-- 
+Author: Fullname
+Comment: Javascript implementation will be prioritized. CSS to 
+follow
+To Do: Implement submit and cancel functionality 
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+    	function onLoginBtnClick()
+        {
+        	alert(document.getElementById("username").value);
+        }
+        function onClearBtnClick()
+        {
+        	document.getElementId("username").value = "";
+        }
+    </script>
+</head>
+<body>
+    <form>
+        <label for="txtUsername">USERNAME:</label>
+        <input type="text" id="txtUsername" name="txtUsername"><br>
+
+        <label for="txtPassword">PASSWORD:</label>
+        <input type="text" id="txtPassword" name="txtPassword"><br>
+        
+        <button type="submit" onClick="onLoginBtnClick()">Login</button>
+    	<button type="button" onClick="onClearBtnClick()">Clear</button>
+    </form>
+</body>
+</html>
