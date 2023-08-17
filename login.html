@@ -1,7 +1,6 @@
 <!-- 
-Author: Fullname
-Comment: Javascript implementation will be prioritized. CSS to 
-follow
+Author: Christian Michael Bravo
+Comment: JavaScript implementation will be prioritized. CSS to follow
 To Do: Implement submit and cancel functionality 
 -->
 
@@ -10,14 +9,14 @@ To Do: Implement submit and cancel functionality
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script>
-    	function onLoginBtnClick()
-        {
-        	alert(document.getElementById("username").value);
+	<script>
+        function onLoginBtnClick() {
+            alert(document.getElementById("txtUsername").value);
         }
-        function onClearBtnClick()
-        {
-        	document.getElementId("username").value = "";
+        
+        function onClearBtnClick() {
+            document.getElementById("txtUsername").value = "";
+            document.getElementById("txtPassword").value = "";
         }
     </script>
 </head>
@@ -27,10 +26,10 @@ To Do: Implement submit and cancel functionality
         <input type="text" id="txtUsername" name="txtUsername"><br>
 
         <label for="txtPassword">PASSWORD:</label>
-        <input type="text" id="txtPassword" name="txtPassword"><br>
+        <input type="password" id="txtPassword" name="txtPassword"><br>
         
-        <button type="submit" onClick="onLoginBtnClick()">Login</button>
-    	<button type="button" onClick="onClearBtnClick()">Clear</button>
+        <button type="button" onclick="onLoginBtnClick()">Login</button>
+        <button type="button" onclick="onClearBtnClick()">Clear</button>
     </form>
 </body>
 </html>
