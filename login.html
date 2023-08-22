@@ -1,5 +1,5 @@
 <!-- 
-Author: Fullname
+Author: Christian Bravo
 Comment: Javascript implementation will be prioritized. CSS to 
 follow
 To Do: Implement submit and cancel functionality 
@@ -11,13 +11,24 @@ To Do: Implement submit and cancel functionality
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script>
-    	function onLoginBtnClick()
+        function onLoginBtnClick()
         {
-        	alert(document.getElementById("username").value);
+            const errorMsg = "ERROR: Either the username or the password were not provided. Please try again.";
+
+            let username = document.getElementById("txtUsername").value.trim();
+            let isUsernameEmpty = username.length === 0;
+
+            console.log("isUsernameEmpty=", isUsernameEmpty);
+
+            if (isUsernameEmpty) 
+            {
+                alert(errorMsg);
+                return;
+            }
         }
         function onClearBtnClick()
         {
-        	document.getElementId("username").value = "";
+            document.getElementById("txtUsername").value = "";
         }
     </script>
 </head>
@@ -29,8 +40,8 @@ To Do: Implement submit and cancel functionality
         <label for="txtPassword">PASSWORD:</label>
         <input type="text" id="txtPassword" name="txtPassword"><br>
         
-        <button type="submit" onClick="onLoginBtnClick()">Login</button>
-    	<button type="button" onClick="onClearBtnClick()">Clear</button>
+        <button type="button" onclick="onLoginBtnClick()">Login</button>
+        <button type="button" onclick="onClearBtnClick()">Clear</button>
     </form>
 </body>
 </html>
