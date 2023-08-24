@@ -1,6 +1,7 @@
 <!-- 
-Author: Christian Michael Bravo
-Comment: JavaScript implementation will be prioritized. CSS to follow
+Author: Christian Bravo
+Comment: Javascript implementation will be prioritized. CSS to 
+follow
 To Do: Implement submit and cancel functionality 
 -->
 
@@ -9,14 +10,25 @@ To Do: Implement submit and cancel functionality
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<script>
-        function onLoginBtnClick() {
-            alert(document.getElementById("txtUsername").value);
+    <script>
+        function onLoginBtnClick()
+        {
+            const errorMsg = "ERROR: Either the username or the password were not provided. Please try again.";
+
+            let username = document.getElementById("txtUsername").value.trim();
+            let isUsernameEmpty = username.length === 0;
+
+            console.log("isUsernameEmpty=", isUsernameEmpty);
+
+            if (isUsernameEmpty) 
+            {
+                alert(errorMsg);
+                return;
+            }
         }
-        
-        function onClearBtnClick() {
+        function onClearBtnClick()
+        {
             document.getElementById("txtUsername").value = "";
-            document.getElementById("txtPassword").value = "";
         }
     </script>
 </head>
